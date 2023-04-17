@@ -1,0 +1,685 @@
+@media (max-width: 768px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+    
+    /* 輪撥套件照片設定 */
+    .carousel .carousel-item img {
+        height: 50%;
+        width: 50%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    /* 添加邊距 */
+    .carousel-caption {
+        padding: 15px; /* 添加内边距，使文字与边框保持一定距离 */
+        border-radius: 5px; /* 添加边框圆角 */
+    }
+
+    .carousel-caption h5 {
+        font-size: 1em;
+        font-weight: bold;
+        color: #ffffff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* 添加阴影效果 */
+    }
+
+    .carousel-content {
+        font-size: 1.5em;
+        color: #ffffff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* 添加阴影效果 */
+    }
+
+    /* article.php中的col距離設定 */
+
+    .navbar {
+        font-size: 20px;
+        padding: 20px;
+    }
+
+    .search-form {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    /* 上邊框CSS */
+    .custom-border-top {
+        border-top: 2px solid #000000;
+    }
+
+    /* 超連結a */
+    .custom-a {
+        text-decoration: none; /* 去除下划线 */
+        color: black; /* 设置颜色为黑色 */
+    }
+
+    /* card設定 */
+    .card {
+        height: auto;
+        /* overflow: hidden; */
+        border: none;
+        border-radius: 0;
+    }
+
+    /* 熱門分類中的文章設定 */
+
+        /* 設定文章的card大小 */
+        .custom-card-article {
+            min-height: 275px;
+            width: auto;
+        }
+
+        /* 取消card-body中的文字置中 */
+        .card-body-custom {
+            padding: 0 !important;
+            margin: 0 !important;
+            line-height: 1.5; /* 調整行間距 */
+            letter-spacing: 0.05em; /* 調整字母間距 */
+        }
+
+        /* 去除card-img倒圓角 */
+        .card-img-top{
+            border-radius: 0;
+        }
+
+
+        /* 設定人工智慧等類別下card-img的大小 */
+        .custom-card-img-article {
+            height: 200px;
+            width: auto;
+            object-fit: cover;
+        }
+
+    /* headline設定 */
+
+        /* headline-card css */
+        .card-headline {
+            height: 100%;
+            width: 100%;
+            border: none;
+            border-radius: 0;
+        }
+
+        /* headline圖片設定 */
+        .custom-headline-img {
+            height: 70%;
+            width: auto;
+        }
+
+        /* headline-title css */
+        .card-title-headline {
+            font-weight: bold;
+            font-family: Apercu, helvetica, sans-serif;
+            font-size: 2rem;
+            line-height: 2; /* 調整行間距 */
+            letter-spacing: 0.05em; /* 調整字母間距 */
+        }
+
+        /* headline分隔線css */
+        .divider {
+            background-color: #b3b3b3; /* 分隔線顏色 */
+            width: 1px;
+            height: 95%;
+        }
+
+    /* 去除headline的邊距 讓右邊的headline能更靠近左邊的headline*/
+    .no-padding {
+        width: 20px;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* subheadline設定 */
+
+        /* 右邊headline設定 */
+        .subheadline-item {
+            width: 100%;
+            line-height: 2; /* 調整行間距 */
+            letter-spacing: 0.05em; /* 調整字母間距 */
+        }
+
+    /* 下方所有文章的CSS樣式 */
+
+        .divider-horizontal {
+            background-color: #a3a3a3;
+            width: 100%;
+            height: 1px;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .divider-horizontal.visible {
+            opacity: 1;
+        }
+
+        .search-divider-horizontal {
+            background-color: #a3a3a3;
+            width: 100%;
+            height: 1px;
+            opacity: 1;
+        }
+
+        /* 卡片樣式 */
+        .card-img {
+            height: 200px;
+            object-fit: cover;
+            border-radius: 0;
+        }
+
+        /* 卡片文字標題大小 */
+        .text-container {
+            height: 1.6em; /* 根据字体大小和行高调整高度 */
+            overflow: hidden;
+            line-height: 1.5; /* 調整行間距 */
+            letter-spacing: 0.05em; /* 調整字母間距 */
+        }
+
+        .title-container {
+            overflow: hidden;
+            line-height: 1.5; /* 調整行間距 */
+            letter-spacing: 0.05em; /* 調整字母間距 */
+        }
+
+        /* 漸變設定-一開始先設為不可見 */
+        .article {
+            opacity: 0; 
+            transition: opacity 1s; /* 漸變速度 */
+        }
+        
+        /* 漸變設定 */
+        .article.visible {
+            opacity: 1;
+        }
+
+    /* 文章(article.php) CSS */
+
+        .custom-article-p{
+            margin: 0 !important;  /* 不讓文字跟上下有太大間距 */
+            line-height: 1.5; /* 調整行間距 */
+            letter-spacing: 0.05em; /* 調整字母間距 */
+        }
+
+        .article-title {
+            line-height: 1.5; /* 調整行間距 */
+            letter-spacing: 0.05em; /* 調整字母間距 */
+        }
+
+        .article_img {
+            width: 100%; /* 或您希望的固定寬度 */
+            height: 200px; /* 或您希望的固定高度 */
+            object-fit: cover; /* 保持圖像的縮放比例 */
+        }
+
+        .articles-divider-horizontal{
+            background-color: #2e2d2d;
+            width: 100%;
+            height: 1px;
+            opacity: 1;
+        }
+
+        .articles-divider-horizontal-2{
+            background-color: #2e2d2d;
+            width: 100%;
+            height: 1px;
+            opacity: 1;
+        }
+
+        .articles-divider{
+            background-color: #2e2d2d;
+            width: 1px;
+            height: 100%;
+            opacity: 1;
+        }
+
+        .article-text {
+            font-size: 0.75em;
+            line-height: 1.5; /* 調整行間距 */
+            letter-spacing: 0.05em; /* 調整字母間距 */
+        }
+        
+    /* 廣告CSS */
+    .your-ad-class {
+        height: 100px;
+        min-width: 200px; /* 添加最小寬度 */
+        width: 100%;
+        /* background-color: #a3a3a3; */
+    }
+
+    .custom-article-ad {
+        min-height: 250px !important;
+        max-height: 500px;
+        width: auto;
+    }
+
+    /* 頁碼大小 */
+    .page-transfer {
+        font-size: 150%;
+    }
+
+    /* 社群媒體設定 */ 
+    .line-it-button {
+        margin-right: 20px; /* 調整此值以更改按鈕之間的間距 */
+    }
+
+    /* 熱門文章列表樣式 */
+        .top10-image {
+            width: 60px;
+            height: 60px;
+        }
+
+        .today-hot {
+            display: none;
+            max-height: 50%; /* 或您希望的固定高度，如 300px */
+            overflow-y: auto; /* 使內容可滾動 */
+        }
+
+        .today-hot-title {
+            font-size: 2em;
+        }
+        .custom-list-style {
+            font-size: inherit;
+            margin: 0;
+            list-style-type: decimal;
+            padding-left: 0;
+        }
+
+        .custom-list-style > li {
+            padding: 10px 10px 10px 50px;
+            line-height: 1.3;
+            list-style: none;
+            background: none;
+            position: relative;
+            display: flex;
+            align-items: center;
+            border: none;
+            border-bottom: 1px solid #666666;
+        }
+
+        .number-container {
+            display: inline-flex;
+            width: 30px;
+            margin-right: 10px;
+            position: absolute;
+            left: 10px;
+        }
+
+        .number {
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+        }
+
+        .title {
+            flex-grow: 1;
+        }
+
+        /* 頁尾CSS */
+
+        .custom-footer {
+            background: rgba(0, 0, 0, 0.2);;
+        }
+
+        .footer-divider-horizontal {
+            background-color: #2e2d2d;
+            width: 100%;
+            height: 2px;
+            opacity: 1;
+        }
+
+        .custom-logo-image {
+            height: auto;
+            width: 500px;
+            object-fit: cover;
+        }
+        .slogan-container {
+            padding: 15px;
+            text-align: center;
+        }
+    }
+
+/* 電腦版網頁CSS設定 */
+@media (min-width: 769px) {
+    
+    /* 輪撥套件照片設定 */
+    .carousel .carousel-item img {
+        height: 50%;
+        width: 50%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    
+    /* 添加邊距 */
+    .carousel-caption {
+        padding: 15px; /* 添加内边距，使文字与边框保持一定距离 */
+        border-radius: 5px; /* 添加边框圆角 */
+    }
+    
+    .carousel-caption h5 {
+        font-size: 2em;
+        font-weight: bold;
+        color: #ffffff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* 添加阴影效果 */
+    }
+    
+    .carousel-content {
+        font-size: 1.5em;
+        color: #ffffff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* 添加阴影效果 */
+    }
+
+    /* article.php中的col距離設定 */
+    .col-md-9 {
+        padding-right: 36px; /* 自定义间距，可根据需要调整 */
+    }
+    .col-md-3 {
+        padding-left: 36px; /* 自定义间距，可根据需要调整 */
+    }
+
+    .navbar {
+        font-size: 20px;
+        padding: 20px;
+    }
+    
+    .search-form {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    
+    /* 上邊框CSS */
+    .custom-border-top {
+        border-top: 2px solid #000000;
+    }
+    
+    /* 超連結a */
+    .custom-a {
+        text-decoration: none; /* 去除下划线 */
+        color: black; /* 设置颜色为黑色 */
+    }
+    
+    /* card設定 */
+    .card {
+        height: auto;
+        /* overflow: hidden; */
+        border: none;
+        border-radius: 0;
+    }
+    
+    /* 熱門分類中的文章設定 */
+    
+        /* 設定文章的card大小 */
+        .custom-card-article {
+            height: 400px;
+            width: auto;
+            object-fit: cover;
+        }
+    
+        /* 取消card-body中的文字置中 */
+        .card-body-custom {
+            padding: 0 !important;
+            margin: 0 !important;
+            line-height: 1.5; /* 調整行間距 */
+            letter-spacing: 0.05em; /* 調整字母間距 */
+        }
+    
+        /* 去除card-img倒圓角 */
+        .card-img-top{
+            border-radius: 0;
+        }
+    
+    
+        /* 設定人工智慧等類別下card-img的大小 */
+        .custom-card-img-article {
+            height: 200px;
+            width: auto;
+            object-fit: cover;
+        }
+    
+    /* headline設定 */
+    
+        /* headline-card css */
+        .card-headline {
+            height: 100%;
+            width: 100%;
+            border: none;
+            border-radius: 0;
+        }
+    
+        /* headline圖片設定 */
+        .custom-headline-img {
+            height: 70%;
+            width: auto;
+        }
+    
+        /* headline-title css */
+        .card-title-headline {
+            font-weight: bold;
+            font-family: Apercu, helvetica, sans-serif;
+            font-size: 2rem;
+            line-height: 2; /* 調整行間距 */
+            letter-spacing: 0.05em; /* 調整字母間距 */
+        }
+    
+        /* headline分隔線css */
+        .divider {
+            background-color: #b3b3b3; /* 分隔線顏色 */
+            width: 1px;
+            height: 95%;
+        }
+    
+    /* 去除headline的邊距 讓右邊的headline能更靠近左邊的headline*/
+    .no-padding {
+        width: 20px;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    /* subheadline設定 */
+    
+        /* 右邊headline設定 */
+        .subheadline-item {
+            width: 100%;
+            line-height: 2; /* 調整行間距 */
+            letter-spacing: 0.05em; /* 調整字母間距 */
+        }
+
+    /* 下方所有文章的CSS樣式 */
+    
+        .divider-horizontal {
+            background-color: #a3a3a3;
+            width: 100%;
+            height: 1px;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+    
+        .divider-horizontal.visible {
+            opacity: 1;
+        }
+    
+        .search-divider-horizontal {
+            background-color: #a3a3a3;
+            width: 100%;
+            height: 1px;
+            opacity: 1;
+        }
+    
+        /* 卡片樣式 */
+        .card-img {
+            height: 200px;
+            object-fit: cover;
+            border-radius: 0;
+        }
+    
+        /* 卡片文字標題大小 */
+        .text-container {
+            height: 3.6em; /* 根据字体大小和行高调整高度 */
+            overflow: hidden;
+            line-height: 1.5; /* 調整行間距 */
+            letter-spacing: 0.05em; /* 調整字母間距 */
+        }
+    
+        .title-container {
+            height: 3em; /* 根據字體大小和行高調整高度 */
+            overflow: hidden;
+            line-height: 1.5; /* 調整行間距 */
+            letter-spacing: 0.05em; /* 調整字母間距 */
+        }
+    
+        /* 漸變設定-一開始先設為不可見 */
+        .article {
+            opacity: 0; 
+            transition: opacity 1s; /* 漸變速度 */
+        }
+        
+        /* 漸變設定 */
+        .article.visible {
+            opacity: 1;
+        }
+    
+    /* 文章(article.php) CSS */
+
+        .custom-article-p{
+            margin: 0 !important;  /* 不讓文字跟上下有太大間距 */
+            line-height: 1.5; /* 調整行間距 */
+            letter-spacing: 0.05em; /* 調整字母間距 */
+        }
+
+        .article-title {
+            line-height: 1.5; /* 調整行間距 */
+            letter-spacing: 0.05em; /* 調整字母間距 */
+        }
+    
+        .article_img {
+            width: 100%; /* 或您希望的固定寬度 */
+            height: 500px; /* 或您希望的固定高度 */
+            object-fit: cover; /* 保持圖像的縮放比例 */
+        }
+    
+        .articles-divider-horizontal{
+            background-color: #2e2d2d;
+            width: 100%;
+            height: 1px;
+            opacity: 1;
+        }
+
+        .articles-divider-horizontal-2{
+            background-color: #2e2d2d;
+            width: 100%;
+            height: 1px;
+            opacity: 1;
+        }
+    
+        .articles-divider{
+            background-color: #2e2d2d;
+            width: 1px;
+            height: 100%;
+            opacity: 1;
+        }
+    
+        .article-text {
+            font-size: 2em;
+            line-height: 1.5; /* 調整行間距 */
+            letter-spacing: 0.05em; /* 調整字母間距 */
+        }
+        
+    /* 廣告CSS */
+    .your-ad-class {
+        min-height: 33%;
+        min-width: 320px; /* 添加最小寬度 */
+        width: 100%;
+        /* background-color: #a3a3a3; */
+    }
+
+    .custom-article-ad {
+        min-height: 250px !important;
+        max-height: 500px;
+        width: auto;
+    }
+
+    /* 頁碼大小 */
+    .page-transfer {
+        font-size: 150%;
+    }
+    
+    /* 社群媒體設定 */ 
+    .line-it-button {
+        margin-right: 20px; /* 調整此值以更改按鈕之間的間距 */
+      }
+
+    /* 熱門文章列表樣式 */
+        .top10-image {
+            width: 60px;
+            height: 60px;
+        }
+
+        .today-hot {
+            max-height: 50%; /* 或您希望的固定高度，如 300px */
+            overflow-y: auto; /* 使內容可滾動 */
+        }
+    
+        .today-hot-title {
+            font-size: 2em;
+        }
+        .custom-list-style {
+            font-size: inherit;
+            margin: 0;
+            list-style-type: decimal;
+            padding-left: 0;
+        }
+    
+        .custom-list-style > li {
+            padding: 10px 10px 10px 50px;
+            line-height: 1.3;
+            list-style: none;
+            background: none;
+            position: relative;
+            display: flex;
+            align-items: center;
+            border: none;
+            border-bottom: 1px solid #666666;
+        }
+    
+        .number-container {
+            display: inline-flex;
+            width: 30px;
+            margin-right: 10px;
+            position: absolute;
+            left: 10px;
+        }
+    
+        .number {
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+        }
+    
+        .title {
+            flex-grow: 1;
+        }
+
+        /* 頁尾CSS */
+
+        .custom-footer {
+            background: rgba(0, 0, 0, 0.2);;
+        }
+
+        .footer-divider-horizontal {
+            background-color: #2e2d2d;
+            width: 100%;
+            height: 2px;
+            opacity: 1;
+        }
+
+        .custom-logo-image {
+            height: auto;
+            width: 500px;
+            object-fit: cover;
+        }
+        .slogan-container {
+            padding: 15px;
+            text-align: center;
+        }
+}
+
